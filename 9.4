@@ -1,0 +1,32 @@
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+
+    def describe_restaurant(self):
+        print(f"{self.restaurant_name} ({self.cuisine_type})")
+
+    def open_restaurant(self):
+        print(f"{self.restaurant_name} açıqdır.")
+
+    def set_number_served(self, customers):
+        """Xidmət göstərilmiş müştəri sayını təyin edir."""
+        self.number_served = customers
+
+    def increment_number_served(self, additional_customers):
+        """Müştəri sayını verilən ədəd qədər artırır."""
+        self.number_served += additional_customers
+
+
+restaurant = Restaurant("Baku Grill", "Türk və Qafqaz")
+print(f"İlkin müştəri sayı: {restaurant.number_served}")
+
+restaurant.number_served = 15
+print(f"Yenilənmiş müştəri sayı: {restaurant.number_served}")
+
+restaurant.set_number_served(42)
+print(f"set_number_served sonrası: {restaurant.number_served}")
+
+restaurant.increment_number_served(28)
+print(f"increment_number_served sonrası: {restaurant.number_served}")
