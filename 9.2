@@ -1,0 +1,19 @@
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print(f"{self.restaurant_name} — mətbəx növü: {self.cuisine_type}.")
+
+    def open_restaurant(self):
+        print(f"{self.restaurant_name} açıqdır.")
+
+
+r1 = Restaurant("Şəhriyar", "Milli mətbəx")
+r2 = Restaurant("La Strada", "İtalyan mətbəxi")
+r3 = Restaurant("Tokyo House", "Yapon mətbəxi")
+
+r1.describe_restaurant()
+r2.describe_restaurant()
+r3.describe_restaurant()
